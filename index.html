@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <title>Continue</title>
   <script>
     function sendMessageToApp() {
-      console.log("run navigate to home")
+      // Send a message to the React Native WebView
       window.ReactNativeWebView.postMessage("navigateHome");
     }
   </script>
 </head>
+
 <body>
-  <div style="text-align: center; margin-top: 50px;">
-    <h1>Flow Completed</h1>
-    <p>Click continue to go back to the app</p>
-    <button onclick="sendMessageToApp()">Continue</button>
+  <div class="w-full h-full max-w-[100wv] max-h-[100vh] px-6 py-6">
+    <div class="w-full flex justify-center items-center mt-20 mb-10">
+      <img src="./logo.png" />
+    </div>
+    <div class="w-full flex-col justify-center items-center mb-3">
+      <h1
+        style="font-family: 'Work Sans', sans-serif; font-size: 26px; font-weight: 600; line-height: 36px; text-align: start;">
+        Awesome! You’ve connected your account
+      </h1>
+      <p style="
+        color: rgba(60, 60, 67, 0.80);
+        font-feature-settings: 'ss03' on;
+        font-family: 'Inter', sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.43px;
+      ">
+        Your bank is now connected to Brolly
+        and you are ready to rock and roll.
+      </p>
+    </div>
+    <div class=" ">
+      <button onclick="sendMessageToApp()" style="
+    position: fixed;
+    bottom: 16px;
+    left: 24px;
+    right: 24px;
+    background-color: #3FFD6A;
+    padding: 16px;
+    border-radius: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+      inset 0px 0px 0px 1px rgba(16, 24, 40, 0.18),
+      inset 0px -4px 0px 0px rgba(16, 24, 40, 0.05),
+      0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+        <p class="text-[#141920] text-[17px] leading-[24px] tracking-[-0.43px]" style="
+          font-feature-settings: 'ss03' on;
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-weight: 550;
+        ">
+          Continue
+        </p>
+
+      </button>
+    </div>
   </div>
 </body>
+
 </html>
